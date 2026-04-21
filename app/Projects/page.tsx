@@ -19,6 +19,15 @@ const Projects = () => {
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
+
+      <div className="flex mt-10 justify-between">
+        <a className="hover:opacity-70 transition" href="./AboutMe">
+          ← About Me
+        </a>
+        <a className="hover:opacity-70 transition" href="./Tools">
+          Skills & Tools →
+        </a>
+      </div>
     </section>
   );
 };
