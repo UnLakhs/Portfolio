@@ -1,3 +1,4 @@
+import ProjectCarousel from "@/app/components/ProjectCarousel";
 import { projects } from "@/app/data/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -74,21 +75,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <div className="space-y-4">
         <h2 className="text-xl font-semibold tracking-tight">Screenshots</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {project.images.map((image, index) => (
-            <div
-              key={image}
-              className="relative aspect-16/10 overflow-hidden rounded-xl border border-foreground/10"
-            >
-              <Image
-                src={image}
-                alt={`${project.title} screenshot ${index + 1}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
+        <ProjectCarousel images={project.images} title={project.title} />
       </div>
       {project.features && project.features.length > 0 && (
         <div className="space-y-4">
