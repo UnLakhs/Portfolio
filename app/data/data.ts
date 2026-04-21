@@ -1,3 +1,49 @@
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiVercel,
+} from "react-icons/si";
+
+export const skillGroups = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "React", icon: SiReact },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Express", icon: SiExpress },
+    ],
+  },
+  {
+    title: "Database",
+    skills: [{ name: "MongoDB", icon: SiMongodb }],
+  },
+  {
+    title: "Tools",
+    skills: [
+      { name: "Git", icon: SiGit },
+      { name: "GitHub", icon: SiGithub },
+      { name: "Postman", icon: SiPostman },
+      { name: "Vercel", icon: SiVercel },
+    ],
+  },
+];
+
 export interface Project {
   id: string;
   title: string;
