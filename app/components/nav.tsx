@@ -11,37 +11,37 @@ const Nav = () => {
             Introduction
           </a>
           <a
-            href="./AboutMe"
+            href="/AboutMe"
             className="hover:bg-gray-300 p-2 rounded-md transition duration-200"
           >
             About Me
           </a>
           <a
-            href="./Projects"
+            href="/Projects"
             className="hover:bg-gray-300 p-2 rounded-md transition duration-200"
           >
             Projects
           </a>
           <a
-            href="./Skills"
+            href="/Skills"
             className="hover:bg-gray-300 p-2 rounded-md transition duration-200"
           >
             Skills & tools
           </a>
           <a
-            href="./Experience"
+            href="/Experience"
             className="hover:bg-gray-300 p-2 rounded-md transition duration-200"
           >
             Experience
           </a>
           <a
-            href="./Education"
+            href="/Education"
             className="hover:bg-gray-300 p-2 rounded-md transition duration-200"
           >
             Education
           </a>
           <a
-            href="./Contact"
+            href="/Contact"
             className="hover:bg-gray-300 p-2 rounded-md transition duration-200"
           >
             Contact
