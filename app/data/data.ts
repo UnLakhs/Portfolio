@@ -49,7 +49,7 @@ export const projects: Project[] = [
     title: "CineGame-Critic",
     description:
       "A full-stack web application for movie and game reviews, allowing users to create accounts, write reviews, add movies/games to their watchlist, and search for content.",
-    tech: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "TMDB API"],
+    tech: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "TMDB API", "Vercel"],
     github: "https://github.com/WebDevTeam2/CGC",
     images: [
       "/projects/cinegame/screenshot_(1).png",
