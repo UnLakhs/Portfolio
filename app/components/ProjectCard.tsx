@@ -20,7 +20,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           src={project.images[0]}
           alt={project.title}
           fill
-          className="object-cover transition duration-300 group-hover:scale-[1.02]"
+          className="object-cover transition duration-300"
         />
       </div>
 
