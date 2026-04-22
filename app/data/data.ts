@@ -164,3 +164,18 @@ export const projects: Project[] = [
       "This is the website you are currently viewing. It was designed to present my work and skills in a clean and structured way.",
   },
 ];
+
+export const education = [
+  {
+    degree: "BSc in Informatics",
+    school: "University of Western Macedonia, Kastoria",
+    period: "2020 – 2024",
+    gpa: "7.84 / 10",
+    details: [
+      "Focused on software development and web technologies",
+      "Completed projects involving full-stack web applications",
+      "Participated in IEEEXtreme programming competition",
+      "Thesis: Designed and developed CineGame-Critic, a full-stack web application for movie and game reviews"
+    ],
+  },
+];
