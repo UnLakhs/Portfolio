@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -15,15 +16,26 @@ const navItems = [
 
 const Nav = () => {
   const pathname = usePathname();
+  const activeLinkRef = useRef<HTMLAnchorElement | null>(null);
+
+  const isActivePath = (path: string) =>
+    path === "/"
+      ? pathname === "/"
+      : pathname === path || pathname.startsWith(path + "/");
+
+  useEffect(() => {
+    activeLinkRef.current?.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  }, [pathname]);
 
   const linkClass = (path: string) => {
-    const isActive =
-      path === "/"
-        ? pathname === "/"
-        : pathname === path || pathname.startsWith(path + "/");
+    const isActive = isActivePath(path);
 
     return `whitespace-nowrap rounded-md px-3 py-2 transition duration-200 ${
-      isActive ? "bg-gray-300 font-medium" : "hover:bg-gray-300"
+      isActive ? "bg-foreground/10 font-medium" : "hover:bg-foreground/10"
     }`;
   };
 
@@ -35,15 +47,20 @@ const Nav = () => {
         </h4>
 
         <div className="flex gap-2 text-sm md:flex-col md:gap-1 md:text-lg">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={linkClass(item.href)}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = isActivePath(item.href);
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                ref={isActive ? activeLinkRef : null}
+                className={linkClass(item.href)}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>
