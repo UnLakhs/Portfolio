@@ -64,7 +64,7 @@ const ProjectCarousel = ({ images, title }: ProjectCarouselProps) => {
         <div className="flex items-center justify-between">
           <button
             onClick={prevImages}
-            className="rounded-lg border border-foreground/10 px-4 py-2 text-sm hover:bg-foreground/5 transition hover:cursor-pointer"
+            className="rounded-lg bg-white border border-foreground/10 px-4 py-2 text-sm hover:bg-foreground/5 transition hover:cursor-pointer"
           >
             ← Previous
           </button>
@@ -75,7 +75,7 @@ const ProjectCarousel = ({ images, title }: ProjectCarouselProps) => {
 
           <button
             onClick={nextImages}
-            className="rounded-lg border border-foreground/10 px-4 py-2 text-sm hover:bg-foreground/5 transition hover:cursor-pointer"
+            className="rounded-lg bg-white border border-foreground/10 px-4 py-2 text-sm hover:bg-foreground/5 transition hover:cursor-pointer"
           >
             Next →
           </button>

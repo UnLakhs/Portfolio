@@ -54,7 +54,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.tech.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-foreground/10 px-3 py-1 text-sm text-foreground/80"
+              className="rounded-full border bg-white border-foreground/10 px-3 py-1 text-sm text-foreground/80"
             >
               {item}
             </span>
@@ -79,7 +79,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-fit gap-2 items-center rounded-lg border border-foreground/20 bg-transparent px-4 py-2 text-sm font-medium text-foreground transition hover:bg-foreground/5"
+              className="inline-flex w-fit gap-2 items-center rounded-lg border border-foreground/20 bg-white px-4 py-2 text-sm font-medium text-foreground transition hover:bg-foreground/5"
             >
               <FaGithub className="w-4 h-4" />
               View GitHub Repository
@@ -99,7 +99,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {project.features.map((feature) => (
               <li
                 key={feature}
-                className="rounded-xl border border-foreground/10 p-4 text-sm leading-6 text-foreground/80"
+                className="rounded-xl border border-foreground/10 bg-white p-4 text-sm leading-6 text-foreground/80"
               >
                 {feature}
               </li>
@@ -108,7 +108,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       )}
       {project.projectNotes && (
-        <div className="space-y-3 rounded-2xl border border-foreground/10 p-5">
+        <div className="space-y-3 rounded-2xl border border-foreground/10 p-5 bg-white">
           <h2 className="text-xl font-semibold tracking-tight">
             Project Notes
           </h2>

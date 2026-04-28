@@ -22,7 +22,7 @@ const Experience = () => {
         {experiences.map((experience) => (
           <article
             key={`${experience.role}-${experience.company}`}
-            className="space-y-5 rounded-2xl border border-foreground/10 p-6"
+            className="space-y-5 rounded-2xl border bg-white border-foreground/10 p-6"
           >
             <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
               <div className="space-y-1">

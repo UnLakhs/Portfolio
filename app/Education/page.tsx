@@ -20,7 +20,7 @@ const Education = () => {
         {education.map((item) => (
           <article
             key={item.school}
-            className="space-y-5 rounded-2xl border border-foreground/10 p-6"
+            className="space-y-5 rounded-2xl bg-white border border-foreground/10 p-6"
           >
             <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
               <div className="space-y-1">

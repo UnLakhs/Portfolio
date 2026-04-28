@@ -13,7 +13,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <Link
       href={`/Projects/${project.id}`}
-      className="group overflow-hidden rounded-2xl border border-foreground/10 bg-background transition hover:-translate-y-1 hover:shadow-md"
+      className="group overflow-hidden rounded-2xl border border-foreground/10 bg-white transition hover:-translate-y-1 hover:shadow-md"
     >
       <div className="relative h-40 w-full overflow-hidden">
         <Image

@@ -28,7 +28,7 @@ const Skills = () => {
                 return (
                   <div
                     key={skill.name}
-                    className="flex items-center gap-3 rounded-xl border border-foreground/10 bg-white/50 px-4 py-3 text-sm text-foreground shadow-sm"
+                    className="flex items-center gap-3 rounded-xl border border-foreground/10 bg-white px-4 py-3 text-sm text-foreground shadow-sm"
                   >
                     <Icon className="text-base opacity-80" />
                     <span>{skill.name}</span>
