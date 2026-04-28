@@ -79,6 +79,7 @@ export interface Project {
   description: string;
   tech: string[];
   github?: string;
+  demo?: string;
   images: string[];
   featured?: boolean;
   status?: "live" | "paused" | "restricted";
@@ -124,8 +125,16 @@ export const projects: Project[] = [
     title: "CineGame-Critic",
     description:
       "A full-stack web application for movie and game reviews, allowing users to create accounts, write reviews, add movies/games to their watchlist, and search for content.",
-    tech: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "TMDB API", "Vercel"],
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Tailwind CSS",
+      "TMDB API",
+      "Vercel",
+    ],
     github: "https://github.com/WebDevTeam2/CGC",
+    demo: "https://www.cinegame-critic.com/",
     images: [
       "/projects/cinegame/screenshot-1.png",
       "/projects/cinegame/screenshot-2.png",
@@ -134,7 +143,7 @@ export const projects: Project[] = [
       "/projects/cinegame/screenshot-5.png",
     ],
     featured: true,
-    status: "paused",
+    status: "live",
     projectNotes:
       "This project was built as part of a team, where I contributed to both frontend and backend development. I co-designed all features regarding user authentication and I designed and implemented all Movies features.",
     features: [
@@ -160,6 +169,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     status: "live",
+    demo: "https://portfolio-production-2878.up.railway.app/",
     projectNotes:
       "This is the website you are currently viewing. It was designed to present my work and skills in a clean and structured way.",
   },
@@ -175,7 +185,7 @@ export const education = [
       "Focused on software development and web technologies",
       "Completed projects involving full-stack web applications",
       "Participated in IEEEXtreme programming competition",
-      "Thesis: Designed and developed CineGame-Critic, a full-stack web application for movie and game reviews"
+      "Thesis: Designed and developed CineGame-Critic, a full-stack web application for movie and game reviews",
     ],
   },
 ];

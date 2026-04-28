@@ -1,6 +1,6 @@
 import ProjectCarousel from "@/app/components/ProjectCarousel";
 import { projects } from "@/app/data/data";
-import Image from "next/image";
+import {FaGithub} from "react-icons/fa";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -60,17 +60,32 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </span>
           ))}
         </div>
+        <div className="flex flex-wrap gap-2">
+          {/* Demo (PRIMARY) — solid black, the hero action */}
+          {project.status === "live" && project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition hover:bg-foreground/85"
+            >
+              View Live Demo →
+            </a>
+          )}
 
-        {project.github && (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-fit items-center rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition hover:opacity-85"
-          >
-            View GitHub Repository
-          </a>
-        )}
+          {/* GitHub (SECONDARY) — outlined, quieter */}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit gap-2 items-center rounded-lg border border-foreground/20 bg-transparent px-4 py-2 text-sm font-medium text-foreground transition hover:bg-foreground/5"
+            >
+              <FaGithub className="w-4 h-4" />
+              View GitHub Repository
+            </a>
+          )}
+        </div>
       </div>
 
       <div className="space-y-4">
