@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/data";
 
@@ -9,8 +10,8 @@ const Projects = () => {
           Projects
         </h1>
         <p className="max-w-3xl text-lg font-light text-foreground">
-          A selection of projects I have worked on, ranging from full-stack web
-          applications to practical systems built around real user needs.
+          A few projects I&apos;ve worked on — mostly full-stack apps built around
+          real, practical use cases.
         </p>
       </div>
 
@@ -21,9 +22,9 @@ const Projects = () => {
       </div>
 
       <div className="flex my-10 justify-between">
-        <a className="hover:opacity-70 transition" href="/">
+        <Link className="hover:opacity-70 transition" href="/">
           ← Introduction
-        </a>
+        </Link>
         <a className="hover:opacity-70 transition" href="./Skills">
           Skills & Tools →
         </a>

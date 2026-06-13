@@ -50,7 +50,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {project.tech.map((item) => (
             <span
               key={item}
@@ -74,6 +74,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           )}
 
           {/* GitHub (SECONDARY) — outlined, quieter */}
+          {project.demoNote && (
+            <p className="max-w-md rounded-lg border border-yellow-200 bg-yellow-50 px-3 py-2 text-sm leading-5 text-yellow-900">
+              <span aria-hidden="true">⚠ </span>
+              {project.demoNote}
+            </p>
+          )}
+
           {project.github && (
             <a
               href={project.github}

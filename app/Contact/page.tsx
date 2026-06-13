@@ -18,7 +18,7 @@ const Contact = () => {
 
       <div className="space-y-4">
         <a
-          href="mailto:your@email.com"
+          href="mailto:apostolos052@gmail.com"
           className="flex items-center gap-3 text-lg hover:opacity-70 transition"
         >
           <FiMail className="w-5 h-5" />

@@ -10,6 +10,8 @@ const statusLabels = {
 };
 
 const ProjectCard = ({ project }: { project: Project }) => {
+  const description = project.cardDescription ?? project.description;
+
   return (
     <Link
       href={`/Projects/${project.id}`}
@@ -35,8 +37,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
           )}
         </div>
 
-        <p className="text-sm leading-6 text-foreground/80">
-          {project.description}
+        <p className="line-clamp-3 text-sm leading-6 text-foreground/80">
+          {description}
         </p>
 
         <ul className="flex flex-wrap gap-2">

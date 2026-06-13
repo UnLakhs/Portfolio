@@ -33,7 +33,7 @@ const Home = () => {
         <div className="flex items-center gap-6">
           {/* CV */}
           <Link
-            href="/cv.pdf"
+            href="/Apostolos_Kyrgidis_Fullstack_Software_Engineer_CV.pdf"
             target="_blank"
             className="flex items-center gap-2 hover:opacity-70 transition"
           >

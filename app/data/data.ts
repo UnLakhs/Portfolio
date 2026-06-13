@@ -4,11 +4,14 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiNodedotjs,
-  SiExpress,
   SiMongodb,
+  SiPostgresql,
+  SiSpringboot,
   SiGit,
   SiGithub,
+  SiNetlify,
   SiPostman,
+  SiRender,
   SiVercel,
 } from "react-icons/si";
 
@@ -55,12 +58,15 @@ export const skillGroups = [
     title: "Backend",
     skills: [
       { name: "Node.js", icon: SiNodedotjs },
-      { name: "Express", icon: SiExpress },
+      { name: "Spring Boot", icon: SiSpringboot },
     ],
   },
   {
     title: "Database",
-    skills: [{ name: "MongoDB", icon: SiMongodb }],
+    skills: [
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "PostgreSQL", icon: SiPostgresql },
+    ],
   },
   {
     title: "Tools",
@@ -68,7 +74,14 @@ export const skillGroups = [
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
       { name: "Postman", icon: SiPostman },
+    ],
+  },
+  {
+    title: "Deployment",
+    skills: [
       { name: "Vercel", icon: SiVercel },
+      { name: "Netlify", icon: SiNetlify },
+      { name: "Render", icon: SiRender },
     ],
   },
 ];
@@ -77,9 +90,11 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  cardDescription?: string;
   tech: string[];
   github?: string;
   demo?: string;
+  demoNote?: string;
   images: string[];
   featured?: boolean;
   status?: "live" | "paused" | "restricted";
@@ -156,11 +171,45 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "pantrytrack",
+    title: "PantryTrack",
+    description:
+      "A full-stack inventory tracker built to practice connecting a React frontend to a Spring Boot REST API with PostgreSQL persistence. Users can manage household food items with real-time expiration tracking, search/filtering, and a dashboard summarizing inventory status (expired, expiring soon, safe).",
+    cardDescription:
+      "A full-stack food inventory app for tracking household items, filtering by status, and monitoring expiration dates.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Spring Boot",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Spring Data JPA",
+      "Netlify",
+      "Render"
+    ],
+    demo: "https://astounding-melba-77c190.netlify.app/",
+    demoNote:
+      "Hosted on a free tier - first request after about 15 minutes of inactivity may take a moment to wake up.",
+    images: [
+      "/projects/pantrytrack/Screenshot.png",
+      "/projects/pantrytrack/Screenshot-1.png",
+    ],
+    featured: true,
+    status: "live",
+    projectNotes:
+      "Built to gain hands-on experience with Java/Spring Boot on the backend after primarily working with Node.js — focused on REST API design, JPA entity relationships, and connecting the frontend to a strongly-typed backend. Deployed frontend on Netlify and backend on Render",
+    features: [
+      "Full CRUD inventory management with search and multi-field filtering (location, expiration status)",
+      "Spring Data JPA + PostgreSQL backend exposing a REST API consumed by the React frontend",
+      "Dashboard view aggregating inventory stats by expiration status",
+    ],
+  },
+  {
     id: "portfolio",
     title: "Portfolio",
     description:
       "A personal portfolio website to showcase my projects and skills.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Railway"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     github: "https://github.com/UnLakhs/portfolio",
     images: [
       "/projects/portfolio/screenshot-1.png",
@@ -169,7 +218,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     status: "live",
-    demo: "https://portfolio-production-2878.up.railway.app/",
+    demo: "https://my-portfolio-sooty-rho-vfpi3g7b1o.vercel.app/",
     projectNotes:
       "This is the website you are currently viewing. It was designed to present my work and skills in a clean and structured way.",
   },
